@@ -1,7 +1,9 @@
 import CategoryItem from "@/components/category-item";
 import NavBar from "@/components/nav-bar";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { CircleAlert, CirclePlus } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { CircleAlert, CirclePlus} from "lucide-react";
+import Link from "next/link";
 
 
 //server actions
@@ -20,7 +22,13 @@ export default async function CategoriesPage() {
                 <div className="bg-[#E2D4BA] min-w-2/3 p-6 rounded m-6">
                     <div className="flex justify-between">
                         <h2 className="text-lg font-bold" >Categorias</h2>
-                        <CirclePlus />
+
+                        <Button asChild className="bg-[#653239]">
+                            <Link href="/categories/form">
+                                <CirclePlus />
+                            </Link>
+                        </Button>
+
                     </div>
 
                     {(data.length == 0) ?

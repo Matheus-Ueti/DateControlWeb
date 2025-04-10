@@ -26,7 +26,7 @@ export default function CategoryFormPage() {
         <>
             <NavBar active="categorias" /> 
             <main className="flex justify-center items-center">
-                <div className="bg-slate-900 min-w-2/3 p-6 rounded m-6">
+                <div className="bg-[#E2D4BB] min-w-2/3 p-6 rounded m-6">
                     <h2 className="text-lg font-bold">Cadastrar categoria</h2>
 
                     <form action={formAction} className="space-y-4"> 
@@ -51,7 +51,7 @@ export default function CategoryFormPage() {
                         </div>
 
                         <div className="flex justify-around">
-                            <Button variant="outline" asChild>
+                            <Button variant="destructive" asChild>
                                 <Link href="/categories">
                                     <ArrowLeft className="mr-2" />
                                     Cancelar
@@ -69,5 +69,4 @@ export default function CategoryFormPage() {
         </>
     );
 }
-
     
